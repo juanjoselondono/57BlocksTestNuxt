@@ -19,7 +19,7 @@ export default {
             this.$emit('authorized', this.authenticated)
         },
     },
-    mounted() {
+    beforeMount() {
         var authorized = Boolean(VueCookieNext.getCookie('authenticated'))
         this.authenticated = authorized
         console.log('authorized', authorized)

@@ -1,8 +1,9 @@
 <script setup>
-import NavBar from '../components/NavBar.vue'
-import { VueCookieNext } from 'vue-cookie-next'
-import fetchPokemon from '../utils/fetchPokemons'
-import Pokemon from '../components/PokemonUnit.vue'
+    import NavBar from '../components/NavBar.vue'
+    import Pagination from '../components/Pagination.vue'
+    import { VueCookieNext } from 'vue-cookie-next'
+    import fetchPokemon from '../utils/fetchPokemons'
+    import Pokemon from '../components/PokemonUnit.vue'
 </script>
 <template>
     <div class="home_container">
@@ -17,22 +18,22 @@ import Pokemon from '../components/PokemonUnit.vue'
                 </button>
             </template>
         </NavBar>
-        <div class="pokemon-grid">
-            <Pokemon
-                v-for="item in pokeList"
-                :key="item.url"
-                :pokemon="item"
-            ></Pokemon>
-        </div>
+        <Pagination
+            :totalPages="10"
+            :perPage="10"
+        />
+
     </div>
 </template>
 <script>
 export default {
+    emits: ['authenticated'],
     data() {
         return {
             pokeList: {
                 default: [],
             },
+            currentPage: 1,
         }
     },
     methods: {
@@ -41,23 +42,6 @@ export default {
             VueCookieNext.removeCookie('authenticated')
             this.$router.replace({ path: '/login' })
         },
-        async fetchData() {
-            var response = await fetchPokemon()
-            this.pokeList = response.results
-            console.log(response.results)
-        },
-    },
-    beforeMount() {
-        // watch the params of the route to fetch the data again
-        this.$watch(
-            () => this.$route.params,
-            () => {
-                this.fetchData()
-            },
-            // fetch the data when the view is created and the data is
-            // already being observed
-            { immediate: true }
-        )
     },
 }
 </script>
