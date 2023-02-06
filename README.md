@@ -16,7 +16,7 @@ Make sure to install the dependencies:
 ```bash
 #clone 
 git clone https://github.com/juanjoselondono
-57BlocksTestNuxt.git 
+/57BlocksTestNuxt.git 
 #go to project
 cd ./57BlocksTestNuxt
 # npm
