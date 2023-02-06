@@ -1,4 +1,8 @@
 # 57 Blocks Frontend Homework
+<img
+  src="https://firebasestorage.googleapis.com/v0/b/website-5e86c.appspot.com/o/Screenshot%20from%202023-02-06%2001-42-58.png?alt=media&token=a2a32b31-7fa8-4d9c-8d73-6c1a95bed665"
+  alt="Alt text"
+  style="display: inline-block; margin: 0 auto; max-width: 300px">
 
 Juan José Londoño David
 
