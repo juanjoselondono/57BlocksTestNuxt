@@ -31,3 +31,9 @@ export default {
     },
 }
 </script>
+
+<style>
+  #__nuxt{
+    height: 100%;
+  }
+</style>
