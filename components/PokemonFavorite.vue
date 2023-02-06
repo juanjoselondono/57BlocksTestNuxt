@@ -5,11 +5,11 @@
         <router-link
         :to="link"
         target="_blank"
-        class="card" style="margin: 5%"
+        class="card pokemon-container"
         >
-            <img class="card-img-top" :src="pokemonImage" alt="Card image cap"/>
+            <img class="card-img-top pokemon-img" :src="pokemonImage" alt="Card image cap"/>
             <div class="card-body">
-                <h5 class="card-title">{{pokemon}}</h5>
+                <h5 class="card-title pokemon-title">{{pokemon}}</h5>
             </div>
         </router-link>
 </template>
@@ -46,6 +46,18 @@ export default {
     },
 }
 </script>
-<style lang="">
-    
+<style>
+    .pokemon-img{
+        width: 20vh;
+        justify-self: center;
+        align-self: center;
+    }
+    .pokemon-title{
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
+    .pokemon-container{
+        margin: 5%;
+    }
 </style>

@@ -126,7 +126,7 @@ export default {
     align-self: center;
 }
 .pokemons_container_item {
-    margin-top: 5%;
+    margin: 5%;
     width: 40vh;
     padding: 10px;
     color: black;
@@ -165,7 +165,7 @@ export default {
     justify-self: center;
     position: relative;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .pokemons_container_item {
         width: 30vh;
         padding: 5px;

@@ -20,12 +20,12 @@ import { VueCookieNext } from 'vue-cookie-next'
                         fill="black"
                     />
                 </svg>
-                57 Blocks Test
+                57Blocks
             </a>
-            <div class="justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="justify-content-center items" id="navbarSupportedContent">
+                <ul class="navbar-nav" >
                     <li class="nav-item">
-                        <slot name="favorites"></slot>
+                        <slot class="favorites-link" name="favorites"></slot>
                     </li>
                     <li class="nav-item">
                         <slot name="logout" :onClick="logout"></slot>
@@ -48,9 +48,7 @@ export default {
 }
 </script>
 <style>
-.navbar-container {
-    width: 100vw;
-}
+
 .my-svg-component {
     /* Scoped CSS here */
     width: 50px;
@@ -58,5 +56,11 @@ export default {
 }
 #navbarNav {
     transition: none !important;
+}
+.items{
+    right: 30px;
+    align-self: center;
+    justify-self: center;
+    margin-left: 10%;
 }
 </style>

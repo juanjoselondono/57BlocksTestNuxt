@@ -22,11 +22,13 @@
                     </li>
                 </template>
             </NavBar>
-            <Pokemon
-                v-for="item in pokeList"
-                :key="item"
-                :pokemon="item"
-            ></Pokemon>
+            <div class = "pokemon-grid">
+                <Pokemon
+                    v-for="item in pokeList"
+                    :key="item"
+                    :pokemon="item"
+                ></Pokemon>
+            </div>
         </div>
     </div>
 </template>
@@ -75,6 +77,7 @@ export default {
     align-self: center;
     justify-self: center;
 }
+
 @media only screen and (max-width: 600px) {
     .pokemon-grid {
         display: grid;

@@ -67,7 +67,7 @@ export default {
     align-items: center;
 }
 .button-slot {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 .nav-item{
     margin-right: 10px;
