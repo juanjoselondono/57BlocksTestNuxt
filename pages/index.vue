@@ -7,22 +7,28 @@
 </script>
 <template>
     <div class="home_container">
-        <NavBar>
-            <template v-slot:logout="{ onClick }">
-                <button
-                    @click="onClick"
-                    type="button"
-                    class="btn button-slot btn-success"
-                >
-                    Logout
-                </button>
-            </template>
-        </NavBar>
-        <Pagination
-            :totalPages="10"
-            :perPage="10"
-        />
-
+        <div v-if ="auth">
+            <NavBar>
+                <template v-slot:logout="{ onClick }">
+                    <button
+                        @click="onClick"
+                        type="button"
+                        class="btn button-slot btn-success"
+                    >
+                        Logout
+                    </button>
+                </template>
+                <template v-slot:favorites="{ onClick }">
+                    <li class="nav-item button-slot">
+                        <a class="nav-link nav-item" aria-current="page" href="/favorites">favorites</a>
+                    </li>
+                </template>
+            </NavBar>
+            <Pagination
+                :totalPages="10"
+                :perPage="10"
+            />
+        </div>
     </div>
 </template>
 <script>
@@ -34,6 +40,7 @@ export default {
                 default: [],
             },
             currentPage: 1,
+            auth: false
         }
     },
     methods: {
@@ -42,6 +49,9 @@ export default {
             VueCookieNext.removeCookie('authenticated')
             this.$router.replace({ path: '/login' })
         },
+    },
+    mounted() {
+        this.auth = Boolean(VueCookieNext.getCookie('authenticated'))
     },
 }
 </script>
@@ -58,6 +68,11 @@ export default {
 }
 .button-slot {
     margin-right: 20px;
+}
+.nav-item{
+    margin-right: 10px;
+    align-self: center;
+    justify-self: center;
 }
 @media only screen and (max-width: 600px) {
     .pokemon-grid {

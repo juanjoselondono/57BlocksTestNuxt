@@ -25,6 +25,9 @@ import { VueCookieNext } from 'vue-cookie-next'
             <div class="justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
+                        <slot name="favorites"></slot>
+                    </li>
+                    <li class="nav-item">
                         <slot name="logout" :onClick="logout"></slot>
                     </li>
                 </ul>

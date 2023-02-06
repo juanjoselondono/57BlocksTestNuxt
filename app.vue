@@ -3,7 +3,7 @@ import { VueCookieNext } from 'vue-cookie-next'
 </script>
 
 <template>
-    <RouterView class="router_view" />
+    <RouterView />
 </template>
 <script>
 export default {
@@ -21,21 +21,18 @@ export default {
     },
     beforeMount() {
         var authorized = Boolean(VueCookieNext.getCookie('authenticated'))
-        this.authenticated = authorized
-        console.log('authorized', authorized)
         if (authorized) {
             this.authenticated = true
         } else {
             this.$router.replace({ path: '/login' })
         }
+        this.authenticated = authorized
+        console.log('authorized', authorized)
     },
 }
 </script>
 
 <style>
-  .router_view{
-    height: 100%;
-  }
   #__nuxt{
     height: 100%;
   }

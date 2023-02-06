@@ -1,6 +1,6 @@
 <script setup>
-import { VueCookieNext } from 'vue-cookie-next'
-import NavBar from '../components/NavBar.vue'
+    import { VueCookieNext } from 'vue-cookie-next'
+    import NavBar from '../components/NavBar.vue'
 </script>
 <template>
     <NavBar />
