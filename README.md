@@ -8,9 +8,10 @@ Make sure to install the dependencies:
 
 ```bash
 #clone 
-git clone https://github.com/juanjoselondono 57BlocksTestNuxt.git 
+git clone https://github.com/juanjoselondono
+57BlocksTestNuxt.git 
 #go to project
-cd /57BlocksTestNuxt
+cd ./57BlocksTestNuxt
 # npm
 npm install
 ```
