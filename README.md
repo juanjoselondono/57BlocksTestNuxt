@@ -1,20 +1,18 @@
-# Nuxt 3 Minimal Starter
+# 57 Blocks Frontend Homework
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Juan José Londoño David
 
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
+#clone 
+git clone https://github.com/juanjoselondono 57BlocksTestNuxt.git 
+#go to project
+cd /57BlocksTestNuxt
 # npm
 npm install
-
-# pnpm
-pnpm install
 ```
 
 ## Development Server
@@ -38,5 +36,3 @@ Locally preview production build:
 ```bash
 npm run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
